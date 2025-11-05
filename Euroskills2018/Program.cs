@@ -1,4 +1,7 @@
 
+using Euroskills2018.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace Euroskills2018
 {
     public class Program
@@ -8,7 +11,7 @@ namespace Euroskills2018
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
+            builder.Services.AddDbContext<EuroskillsDbContext>(opt => opt.UseSqlite(builder.Configuration.GetConnectionString("DbConnection")));
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
