@@ -1,1 +1,1 @@
-# ikt-rcs-szintfelmero-2025-11-05
+# backend-rcs-szintfelmero-2025-11-05
